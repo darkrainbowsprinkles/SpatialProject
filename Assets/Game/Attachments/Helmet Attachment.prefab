@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 523592024888679656}
   - component: {fileID: 3671538760728580796}
   m_Layer: 0
-  m_Name: Helmet Prefab
+  m_Name: Helmet Attachment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

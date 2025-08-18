@@ -1,9 +1,19 @@
 fileFormatVersion: 2
-guid: d2b572b2f472eac4aa40f085c296a6b3
+guid: 318dd3de2273b934db55051dd76dac65
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: 9fd470effc149ea42a89f764a0adadfa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: casco bnrillo
+    second: {fileID: 2100000, guid: 373737a7343855a4190d45293fece3db, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
