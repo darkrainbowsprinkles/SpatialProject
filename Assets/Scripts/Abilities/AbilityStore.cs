@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Papime.Abilities
@@ -7,17 +8,11 @@ namespace Papime.Abilities
         [SerializeField] KeyCode cycleAbilityKey;
         [SerializeField] KeyCode useAbilityKey;
         [SerializeField] Ability[] abilities;
-        int currentAbilityIndex = 0;
-        bool initialAttachmentDone = false;
+        int currentAbilityIndex = -1;
+        Ability currentAbility;
 
         void Update()
         {
-            if (!initialAttachmentDone)
-            {
-                abilities[0].Attach();
-                initialAttachmentDone = true;
-            }
-
             if (Input.GetKeyDown(cycleAbilityKey))
             {
                 CycleCurrentAbility();
@@ -25,17 +20,33 @@ namespace Papime.Abilities
 
             if (Input.GetKeyDown(useAbilityKey))
             {
-                UseCurrentAbility();
+                Use();
             }
         }
 
-        void UseCurrentAbility()
+        void Use()
         {
-            abilities[currentAbilityIndex].Use(gameObject);
+            if (currentAbility != null)
+            {
+                return;
+            }
+
+            currentAbility = abilities[currentAbilityIndex];
+            currentAbility.Use(gameObject, CancelCurrentAbility);
+        }
+
+        void CancelCurrentAbility()
+        {
+            currentAbility = null;
         }
 
         void CycleCurrentAbility()
         {
+            if (currentAbility != null)
+            {
+                return;
+            }
+
             if (currentAbilityIndex == abilities.Length - 1)
             {
                 currentAbilityIndex = 0;

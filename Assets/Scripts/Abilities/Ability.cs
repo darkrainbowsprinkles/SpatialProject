@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using SpatialSys.UnitySDK;
 
@@ -11,18 +12,20 @@ namespace Papime.Abilities
 
         public void Attach()
         {
-            if (!string.IsNullOrEmpty(attachment))
+            if (string.IsNullOrEmpty(attachment))
             {
-                IAvatar localAvatar = SpatialBridge.actorService.localActor.avatar;
-                localAvatar.EquipAttachment(AssetType.EmbeddedAsset, attachment);
+                return;
             }
+
+            IAvatar localAvatar = SpatialBridge.actorService.localActor.avatar;
+            localAvatar.EquipAttachment(AssetType.EmbeddedAsset, attachment);
         }
 
-        public void Use(GameObject user)
+        public void Use(GameObject user, Action finished)
         {
             foreach (var effect in effects)
             {
-                effect.StartEffect(user);
+                effect.StartEffect(user, finished);
             }
         }
     }

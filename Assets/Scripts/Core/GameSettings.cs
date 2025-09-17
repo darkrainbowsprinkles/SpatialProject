@@ -3,7 +3,7 @@ using SpatialSys.UnitySDK;
 
 namespace Papime.Core
 {
-    public class CameraModeSetter : MonoBehaviour
+    public class GameSettings : MonoBehaviour
     {
         [SerializeField] SpatialCameraRotationMode cameraRotationMode;
 
