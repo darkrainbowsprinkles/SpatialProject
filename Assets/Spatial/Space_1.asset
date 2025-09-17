@@ -29,6 +29,9 @@ MonoBehaviour:
     asset: {fileID: 2264801346949725125, guid: 560b5c413f5cffc4a85d8f5ac6972eae, type: 3}
   - id: Loupe
     asset: {fileID: 2264801346949725125, guid: fe48a4f67462a6147a03fa3789c757e3, type: 3}
+  - id: Attack Animation
+    asset: {fileID: -3060717805643410698, guid: 7fe65f0d5afc48a4fb20c167f10f8d04,
+      type: 3}
   networkPrefabs: []
   settings:
     serverInstancingEnabled: 1
