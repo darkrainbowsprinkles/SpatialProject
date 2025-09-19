@@ -8,8 +8,14 @@ namespace Papime.Abilities
         [SerializeField] KeyCode cycleAbilityKey;
         [SerializeField] KeyCode useAbilityKey;
         [SerializeField] Ability[] abilities;
+        public event Action onAbilityCycled;
         int currentAbilityIndex = -1;
         Ability currentAbility;
+
+        public Ability GetCurrentAbility()
+        {
+            return abilities[currentAbilityIndex];
+        }
 
         void Update()
         {
@@ -57,6 +63,7 @@ namespace Papime.Abilities
             }
 
             abilities[currentAbilityIndex].Attach();
+            onAbilityCycled?.Invoke();
         }
     }
 }

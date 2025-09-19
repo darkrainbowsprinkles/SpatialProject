@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Attack Animation Effect
   m_EditorClassIdentifier: 
   animationID: Attack Animation
-  animationTime: 1.2
+  animationTime: 1

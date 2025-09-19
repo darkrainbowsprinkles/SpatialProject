@@ -23,17 +23,22 @@ MonoBehaviour:
   csharpAssembly: {fileID: 5897886265953266890, guid: da40ce9e6ae049f4688d8611644585aa,
     type: 3}
   embeddedPackageAssets:
-  - id: Helmet
+  - id: Helmet Attachment
     asset: {fileID: 3671538760728580796, guid: 0d553ac5b7543e44784ca591e299016e, type: 3}
-  - id: Pickaxe
+  - id: Pickaxe Attachment
     asset: {fileID: 2264801346949725125, guid: 560b5c413f5cffc4a85d8f5ac6972eae, type: 3}
-  - id: Loupe
+  - id: Loupe Attachment
     asset: {fileID: 2264801346949725125, guid: fe48a4f67462a6147a03fa3789c757e3, type: 3}
+  - id: Dropper Attachment
+    asset: {fileID: 2264801346949725125, guid: 139148acbe456f04892e05e2439798dd, type: 3}
   - id: Attack Animation
     asset: {fileID: -3060717805643410698, guid: 7fe65f0d5afc48a4fb20c167f10f8d04,
       type: 3}
   - id: Search Animation
     asset: {fileID: -3060717805643410698, guid: d0fb8ac077ea8434d86ba2b50cbf8714,
+      type: 3}
+  - id: Pour Animation
+    asset: {fileID: -3060717805643410698, guid: 2d631ab571a5c44408b57b737e4614d7,
       type: 3}
   networkPrefabs: []
   settings:

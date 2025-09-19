@@ -8,7 +8,19 @@ namespace Papime.Abilities
     public class Ability : ScriptableObject
     {
         [SerializeField] string attachment;
+        [SerializeField] string displayName;
+        [SerializeField] Sprite icon;
         [SerializeField] Effect[] effects;
+
+        public string GetDisplayName()
+        {
+            return displayName;
+        }
+
+        public Sprite GetIcon()
+        {
+            return icon;
+        }
 
         public void Attach()
         {
